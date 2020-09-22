@@ -40,7 +40,7 @@ ngOnInit(): void {
       .subscribe(response => {
        // post.id = response.id;
        // this.posts.splice(0, 0, post);
-        console.log(response);
+        console.log(post, response);
       });
   }
 

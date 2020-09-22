@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class JSONPlaceholderService{
 
   constructor(private http: HttpClient) { }
-  title: string;
+ // title: string;
   postId;
   private url = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -28,7 +28,7 @@ export class JSONPlaceholderService{
   }
   // tslint:disable-next-line:typedef
   updatePost(post){
-    return this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true }));
+    return this.http.patch(this.url + '/' + post.id , JSON.stringify({ isRead: true }));
     // return this.http.put(this.url, JSON.stringify(post));
   }
 
