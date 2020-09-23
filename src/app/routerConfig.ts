@@ -4,11 +4,11 @@ import {PostsComponent} from './posts/posts.component';
 
 
 const appRoutes: Routes = [
-  { path: 'first',
+  { path: 'home',
     component: RouterComponent
   },
   {
-    path: 'second',
+    path: 'posts',
     component: PostsComponent
   }
 ];
