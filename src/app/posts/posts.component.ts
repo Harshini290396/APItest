@@ -1,26 +1,27 @@
-import {Component, OnInit} from '@angular/core';
-import {JSONPlaceholderService} from './service/jsonplaceholder.service';
+import { Component, OnInit } from '@angular/core';
+import {JSONPlaceholderService} from '../service/jsonplaceholder.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.css']
 })
-export class AppComponent{
- /* title = 'APItest';
+export class PostsComponent implements OnInit {
+
+  title = 'APItest';
   data: Array<any>;
   posts: Array<any>;
 
-constructor(private JSONPlaceholder: JSONPlaceholderService) {
-  this.data = new Array<any>();
-}
+  constructor(private JSONPlaceholder: JSONPlaceholderService) {
+    this.data = new Array<any>();
+  }
 
-ngOnInit(): void {
-  this.JSONPlaceholder.getData().subscribe((posts) => {
-    console.log(posts);
-    this.posts = posts;
-  });
-}
+  ngOnInit(): void {
+    this.JSONPlaceholder.getData().subscribe((posts) => {
+      console.log(posts);
+      this.posts = posts;
+    });
+  }
 
   // tslint:disable-next-line:typedef
   getPost(){
@@ -38,8 +39,8 @@ ngOnInit(): void {
 
     this.JSONPlaceholder.postData(post)
       .subscribe(response => {
-       // post.id = response.id;
-       // this.posts.splice(0, 0, post);
+        // post.id = response.id;
+        // this.posts.splice(0, 0, post);
         console.log(post, response);
       });
   }
@@ -58,5 +59,6 @@ ngOnInit(): void {
         const index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       });
-  }*/
+  }
+
 }

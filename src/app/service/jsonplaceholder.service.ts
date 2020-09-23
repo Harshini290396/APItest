@@ -28,7 +28,8 @@ export class JSONPlaceholderService{
   }
   // tslint:disable-next-line:typedef
   updatePost(post){
-    return this.http.patch(this.url + '/' + post.id , JSON.stringify({ isRead: true }));
+     return this.http.put(this.url + '/' + post.id , JSON.stringify({ isRead: true }));
+    // return this.http.patch(this.url + '/' + post.id , JSON.stringify({ isRead: true }));
     // return this.http.put(this.url, JSON.stringify(post));
   }
 
